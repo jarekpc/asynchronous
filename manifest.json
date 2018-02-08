@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "asynchronous",
+    "version": "2.0",
+    "description": "asynchronous test",
+    "background": {
+        "scripts": ["background-script.js"]
+    },
+    "content_scripts": [
+        {
+            "matches": ["file:///*/index.html"],
+            "js": ["content-script.js"]
+        }
+    ],
+    "permissions": [
+        "notifications",
+        "activeTab"
+    ],
+    "applications": {
+      "gecko": {
+        "id": "eSamboScanner@skg.pl"
+      }
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <script
+          src="http://code.jquery.com/jquery-3.3.1.js"
+          integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+          crossorigin="anonymous"></script>
+    </head>
+    <body>
+		<button id="pony" onclick="test();">Connect</button>
+     <a href="https://www.w3schools.com">Abc</a>
+
+    <input type="file" id="myFile">
+
+    <div id="base64-file-content"></div>
+
+    <div id="rename-name"></div>
+    </body>
+	<script>
+  $( document ).ready(function() {
+      $( "#myFile" ).change(function() {
+      fr = new FileReader();
+      var file = this.files[0];
+      console.log("FileName " + file.name);
+      var reader = new FileReader();
+        reader.onload = function(p){
+
+          console.log(this.result);
+        };
+        window.setFileContent(file);
+      });
+    });
+	function test() {
+    if (typeof window.checkPlugin !== 'undefined') {
+			alert('Plugin zainstalowany ' + window.checkPlugin());
+		}
+	}
+	</script>
+</html>
